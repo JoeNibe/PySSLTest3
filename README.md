@@ -17,7 +17,7 @@
 *  Threaded
 *  Backups up the output and can be recovered if the script is stopped in between
 *  Pauses automatically if the internet connection is lost
-*  
+*  Displays update every 60 seconds
 
 ## Help
 ```
@@ -42,3 +42,4 @@ optional arguments:
 *   The script debug log is written to `pyssltest3_log.txt`. This can be used for debugging.
 *   The estimated time remaining might fluctuate depending of the response time from the SSL Lab api. It might not be very accurate for a small number of applications.
 *   No validity checks are done on input URLs.
+*   The default number of threads is 8. This value was kept as I observed that this configuration gives the optimum performance. SSL Labs provide 25 tests concurrently and then a timeout 1000 seconds is enforced once the test is complete. However the enforced time seems to be different that 1000 seconds. Using 8 threads makes sure that we have maximum performance by using all the threads without sending too many requests.
