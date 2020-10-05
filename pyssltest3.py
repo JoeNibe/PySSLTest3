@@ -47,7 +47,7 @@ LOGGER.info("-"*100)
 
 __version__ = '2.2'
 __author__ = 'Febin Jose; joenibe.github.io'
-__license__ = 'Apache 2.0'
+__license__ = 'GNU General Public License v3.0'
 
 # Global Variables
 API_URLS = {'dev': 'https://api.dev.ssllabs.com/api/v3/',
